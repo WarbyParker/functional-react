@@ -17,7 +17,7 @@ Exploring various approaches to building frontend with React and other modern fr
 ## Check it out
 
 **Clone repo**
-* `git clone git@github.com:pruett/functional-react.git`
+* `git clone git@github.com:WarbyParker/functional-react.git`
 
 **Install dependencies**
 * `npm i`
