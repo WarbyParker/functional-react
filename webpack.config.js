@@ -19,12 +19,8 @@ module.exports =
     , publicPath: '/static/'
     }
   , module:
-    { preloaders:
+    { preLoaders:
       [
-        { test: /\.css$/
-        , loader: 'stylelint'
-        }
-      ,
         { test: /\.jsx?$/
         , loader: 'eslint-loader'
         , exclude: /node_modules/
