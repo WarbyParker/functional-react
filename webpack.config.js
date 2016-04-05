@@ -54,7 +54,8 @@ module.exports =
     }
   , plugins:
     [ new ExtractTextPlugin('style.css')
-    , new StyleLintPlugin(
+    , new StyleLintPlugin
+      (
         { configFile: '.stylelintrc'
         , files: '**/*.css'
         }
