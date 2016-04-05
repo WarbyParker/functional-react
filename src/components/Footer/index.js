@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from './styles.css'
-import globals from './../../styles.css'
 
 export default ({phone}) => {
   return (
-    <footer>
-      <p className={styles.callUs}>
+    <footer className={styles.block}>
+      <p>
         {`Call us at: ${phone}`}
       </p>
     </footer>

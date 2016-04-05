@@ -1,0 +1,19 @@
+@define-mixin bgColor $name, $color {
+  .bg$(name) {
+    background-color: $color;
+
+    @mixin-content;
+  }
+}
+
+@mixin bgColor Red, red {
+  &::after {
+    content: "sweet red";
+  }
+}
+
+@mixin bgColor Green, green {
+  &::after {
+    content: "nice green";
+  }
+}
