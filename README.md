@@ -13,6 +13,7 @@ Exploring various approaches to building frontend with React and other modern fr
 - [ ] JS Linting
 - [ ] High-level approach (FP, HoCs, Eliminate React Mixins)
 - [ ] Page-specific webpack bundling (require.ensure)
+- [ ] Animations
 
 ## Check it out
 
