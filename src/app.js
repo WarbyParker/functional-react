@@ -43,6 +43,20 @@ export default () => {
 
     <h1>Composition Example:</h1>
 
+    <code style={{fontSize: '2rem', background: '#ccc', display: 'block', padding: '1rem'}}>
+      {
+        `The following components are both composed from the same \`Ticker\` Container. This container
+        receives a visual component, and returns a new component that ticks every second.
+        This pattern is used for composition, isolating stateful logic in one place, one container.
+
+        E.g.
+
+        const Component = props => <div>{props.ticker}</div>
+
+        export default Ticker(Component)
+      `}
+    </code>
+
     <Counter />
     <Countdown />
 
