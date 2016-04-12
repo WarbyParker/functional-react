@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import Counter from './components/Composition/Components/Counter'
+import Countdown from './components/Composition/Components/Countdown'
 
 const links =
   [ 'About Us'
@@ -41,7 +42,10 @@ export default () => {
       <Footer phone={'+1 888 555-2011'} />
 
     <h1>Composition Example:</h1>
+
     <Counter />
+    <Countdown />
+
     </div>
   )
 }
