@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
+import Counter from './components/Composition/Components/Counter'
 
 const links =
   [ 'About Us'
@@ -38,6 +39,9 @@ export default () => {
         teamMembers={team}
       />
       <Footer phone={'+1 888 555-2011'} />
+
+    <h1>Composition Example:</h1>
+    <Counter />
     </div>
   )
 }
