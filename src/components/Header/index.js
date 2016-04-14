@@ -1,5 +1,4 @@
-import React from 'react'
-// import styles from './styles.css'
+import React, { PropTypes } from 'react'
 
 const Link = ({link}) => {
   return (
@@ -7,7 +6,11 @@ const Link = ({link}) => {
   )
 }
 
-export default ({header, links}) => {
+Link.propTypes = {
+  link: PropTypes.string.isRequired
+}
+
+const Header = ({header, links}) => {
   return (
     <header>
       <h1>{header}</h1>
@@ -19,3 +22,10 @@ export default ({header, links}) => {
     </header>
   )
 }
+
+Header.propTypes = {
+  header: PropTypes.string,
+  links: PropTypes.array
+}
+
+export default Header

@@ -1,6 +1,6 @@
 import React from 'react'
 
-let Ticker = Component => class extends React.Component {
+export default (Component) => class Ticker extends React.Component {
   constructor () {
     super()
     this.tick = this.tick.bind(this)
@@ -9,10 +9,6 @@ let Ticker = Component => class extends React.Component {
 
   tick () {
     this.setState({ ticker: this.state.ticker + 1 })
-  }
-
-  componentWillMount () {
-    console.log(`mounting...: provided via Ticker Container`)
   }
 
   componentDidMount () {
@@ -28,5 +24,3 @@ let Ticker = Component => class extends React.Component {
     )
   }
 }
-
-export default Ticker

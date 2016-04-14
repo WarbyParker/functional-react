@@ -28,7 +28,7 @@ const team =
     }
   ]
 
-export default () => {
+const App = () => {
   return (
     <div>
       <Header
@@ -41,25 +41,30 @@ export default () => {
       />
       <Footer phone={'+1 888 555-2011'} />
 
-    <h1>Composition Example:</h1>
+      <h1>Composition Example:</h1>
 
-    <code style={{fontSize: '2rem', background: '#ccc', display: 'block', padding: '1rem'}}>
-      {
-        `The following components are both composed from the same \`Ticker\` Container. This container
-        receives a visual component, and returns a new component that ticks every second.
-        This pattern is used for composition, isolating stateful logic in one place, one container.
+      <div style={{fontSize: '1.5rem', background: '#ccc', display: 'block', padding: '1rem'}}>
+        <p>
+          <code>
+            {`The following components are both composed from the same \`Ticker\` Container. This container
+            receives a visual component, and returns a new component that ticks every second.
+            This pattern is used for composition, isolating stateful logic in one place, one container.`}
+          </code>
+        </p>
+        <p><i>E.g.</i></p>
+        <p>
+          <code>{`const Component = props => <div>{props.ticker}</div>`}</code>
+        </p>
+        <p>
+          <code>export default Ticker(Component)</code>
+        </p>
+      </div>
 
-        E.g.
-
-        const Component = props => <div>{props.ticker}</div>
-
-        export default Ticker(Component)
-      `}
-    </code>
-
-    <Counter />
-    <Countdown />
+      <Counter />
+      <Countdown />
 
     </div>
   )
 }
+
+export default App

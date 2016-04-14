@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import styles from './styles.css'
 
-export default ({phone}) => {
+const Footer = ({phone}) => {
   return (
     <footer className={styles.block}>
       <p>
@@ -10,3 +10,9 @@ export default ({phone}) => {
     </footer>
   )
 }
+
+Footer.propTypes = {
+  phone: PropTypes.string
+}
+
+export default Footer

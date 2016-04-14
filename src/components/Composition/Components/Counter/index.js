@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import Ticker from '../../Containers/Ticker'
 
 import styles from './styles.css'
@@ -12,6 +12,11 @@ const Counter = props => {
       </button>
     </div>
   )
+}
+
+Counter.propTypes = {
+  heading: PropTypes.string,
+  ticker: PropTypes.number
 }
 
 // Ticker automatically provides an inner component

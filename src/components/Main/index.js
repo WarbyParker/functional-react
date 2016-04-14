@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 const TeamMember = ({member}) => {
   return (
@@ -10,7 +10,11 @@ const TeamMember = ({member}) => {
   )
 }
 
-export default ({title, teamMembers}) => {
+TeamMember.propTypes = {
+  member: PropTypes.object
+}
+
+const Main = ({title, teamMembers}) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -22,3 +26,10 @@ export default ({title, teamMembers}) => {
     </div>
   )
 }
+
+Main.propTypes = {
+  title: PropTypes.string,
+  teamMembers: PropTypes.array
+}
+
+export default Main
