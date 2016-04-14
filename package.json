@@ -34,7 +34,7 @@
     "react-addons-test-utils": "^0.14.7",
     "style-loader": "^0.13.1",
     "stylelint-webpack-plugin": "0.0.2",
-    "webpack": "^2.1.0-beta.4",
+    "webpack": "^2.1.0-beta.5",
     "webpack-dev-server": "^2.0.0-beta"
   },
   "dependencies": {
