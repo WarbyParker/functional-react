@@ -1,0 +1,78 @@
+$colors: (
+  'blue':              #00a2e1,
+  'blue-highlight':    #4dbdea,
+  'blue-shadow':       #0089bf,
+  'blue-holiday':      #333e48,
+  'blue-cta':          #0caded,
+
+  'dark-gray':         #414b56,
+  'dark-gray-alt-1':   #6b7b8c,
+  'dark-gray-alt-2':   #a1a4a6,
+  'dark-gray-alt-3':   #676f78,
+
+  'red':               #e47c4c,
+  'red-alt-1':         #D6003C,
+
+  'light-gray':        #d2d6d9,
+  'light-gray-alt-1':  #e1e5e6,
+  'light-gray-alt-2':  #f8f8f8,
+  'light-gray-alt-3':  #fcfcfc,
+  'light-gray-alt-4':  #525E69,
+  'light-gray-alt-5':  #676F78,
+
+  'subtle-gray':       #ebeff2,
+
+  'yellow':            #f2b600,
+  'yellow-alt-1':      #e0ac00,
+
+  'white':             #fff,
+  'black':             #000,
+
+  'collection-summer-2016-green': #50E3C2
+
+);
+
+// From https://www.phase2technology.com
+// /blog/exploring-maps-in-sass-3-3part-4-improving-the-map-get-function/
+@function color($key, $opacity: 1, $lighten: 0) {
+  $value: map-get($colors, $key);
+  $value: if($opacity < 1, rgba($value, $opacity), $value);
+  $value: call(if($lighten >= 0, lighten, darken), $value, abs($lighten));
+  @return $value
+};
+
+$transparencies: (
+  'white-0p':  color('white', 0),
+  'white-5p':  color('white', 0.05),
+  'white-60p': color('white', 0.6),
+  'white-90p': color('white', 0.9),
+  'white-95p': color('white', 0.95),
+
+  'black-5p':  color('black', 0.05),
+  'black-10p': color('black', 0.1),
+  'black-20p': color('black', 0.2),
+  'black-50p': color('black', 0.5),
+);
+
+$colors: map-merge($colors, $transparencies);
+
+// General
+$color-link:       color('blue');
+$color-link-hover: color('blue-shadow');
+$color-text:       color('dark-gray');
+$color-stroke-svg: color('dark-gray');
+
+// Form
+$form-color-background:     color('white');
+$form-color-background-alt: color('light-gray-alt-2');
+$form-color-input:          color('dark-gray');
+$form-color-label:          color('dark-gray');
+$form-color-label-hover:    color('dark-gray-alt-2');
+$form-color-border-input:   color('light-gray');
+$form-color-focus:          color('blue');
+$form-color-error:          color('yellow');
+$form-color-success:        color('blue');
+$form-color-disabled:       color('light-gray');
+
+// CTA
+$cta-gray-color:            color('light-gray-alt-2');$colors: (
