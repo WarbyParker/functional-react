@@ -1,0 +1,23 @@
+@import "../../css/colors.scss";
+
+.primaryButton {
+  min-width: 284px;
+  padding: 0 24px;
+  height: 60px;
+  color: color("white");
+  background: color("blue");
+  border: 1px solid color("blue-shadow");
+  font-family: utopia-std, Georgia, serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 1px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  min-width: 284px;
+  padding: 0 24px;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,9 +1,43 @@
 @import "../../css/colors.scss";
 
 .primaryHeading {
+  font-size: 60px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
   color: color("dark-gray");
 }
 
 .secondaryHeading {
-  color: color("dark-gray-alt-1");
+  font-size: 40px;
+  color: color("dark-gray");
+  margin-bottom: 24px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tertiaryHeading {
+  color: color("dark-gray");
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: color("dark-gray-alt-2");
+}
+
+.copyContainer {
+  max-width: 50%;
+}
+
+.copy {
+  color: color("dark-gray");
+  font-size: 18px;
+  line-height: 26px;
 }
