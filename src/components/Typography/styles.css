@@ -1,0 +1,9 @@
+@import "../../css/colors.scss";
+
+.primaryHeading {
+  color: color("dark-gray");
+}
+
+.secondaryHeading {
+  color: color("dark-gray-alt-1");
+}
