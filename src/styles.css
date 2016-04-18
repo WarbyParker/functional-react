@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+
+  &::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+.mastHead {
+  width: 25%;
+  display: inline-block;
+}
+
+.logo {
+  display: inline-block;
+  max-width: 200px;
+  margin-right: 1rem;
+  float: left;
+}
+
+.tagline {
+  font-family: proxima-nova, Helvetica, Verdana, sans-serif;
+  composes: label from "./components/Typography/styles.css";
+  -webkit-font-smoothing: antialiased;
+  float: left;
+}
+
+.nav {
+  max-width: 70%;
+  float: right;
+}
+
+.mainNav {
+  display: inline-block;
+}
+
+.link {
+  float: left;
+  composes: label from "./components/Typography/styles.css";
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+}
