@@ -1,6 +1,8 @@
 Functional React
 ================
 
+![screenshot](https://cloud.githubusercontent.com/assets/794809/14591866/67e20cea-04e6-11e6-9497-36ebef9b4fbc.png)
+
 Exploring various approaches to building frontend with React and other modern frontend tools.
 
 - [x] ES2015 / Babel transpilation
