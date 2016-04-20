@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "BABEL_ENV=test mocha test/setup.js test/**/*.spec.js",
-    "start": "webpack-dev-server --open --inline --hot --env dev"
+    "start": "webpack-dev-server --open --inline --hot --env.dev"
   },
   "author": "",
   "license": "BSD-3-Clause",

@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = function (options) {
+  console.log(options)
   return { devtool: options.dev ? 'cheap-module-eval-source-map' : 'hidden-source-map'
   , devServer:
     { contentBase: 'src/'
