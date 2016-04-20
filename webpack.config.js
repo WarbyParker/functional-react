@@ -3,19 +3,20 @@ var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var StyleLintPlugin = require('stylelint-webpack-plugin')
 
-module.exports =
-  { devtool: 'cheap-module-eval-source-map'
+module.exports = function (options) {
+  return { devtool: options.dev ? 'cheap-module-eval-source-map' : 'hidden-source-map'
   , devServer:
     { contentBase: 'src/'
     , stats: { chunkModules: false, assets: false }
     }
   , entry:
-    [ 'webpack-dev-server/client?http://localhost:8080'
-    , path.join(__dirname, 'src/index.js')
-    ]
+    { web: path.join(__dirname, 'src/index.js')
+    , typography: path.join(__dirname, 'src/components/Typography/index.js')
+    , buttons: path.join(__dirname, 'src/components/Buttons/index.js')
+    }
   , output:
     { path: path.resolve(__dirname, 'build')
-    , filename: 'bundle.js'
+    , filename: '[name]-bundle.js'
     , publicPath: '/static/'
     }
   , module:
@@ -36,7 +37,7 @@ module.exports =
         { test: /\.s?css$/
         , loader: ExtractTextPlugin.extract
           ( 'style-loader'
-          , 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss-loader!sass-loader'
+          , 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!sass-loader!postcss-loader?parser=postcss-scss'
           )
         , exclude: [/node_modules/]
         }
@@ -56,13 +57,11 @@ module.exports =
     , extensions: ['', '.js', '.jsx', '.elm']
     }
   , plugins:
-    [ new ExtractTextPlugin('style.css')
-    , new StyleLintPlugin
-      (
-        { configFile: '.stylelintrc'
-        , files: '**/*.css'
-        }
-      )
+    [ new ExtractTextPlugin('styles.css')
+    , new webpack.optimize.CommonsChunkPlugin('commons')
+    , new StyleLintPlugin({ configFile: '.stylelintrc' })
+    , new webpack.LoaderOptionsPlugin({ minimize: true })
     ]
   , postcss: [ require('autoprefixer') ]
   }
+}
